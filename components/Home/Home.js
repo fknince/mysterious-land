@@ -49,13 +49,12 @@ const Home = () => {
         data-black-overlay="1"
       >
         <div className="container">
-        <div className="row" style={{ marginTop: "40px" }}>
+          <div className="row" style={{ marginTop: "40px" }}>
             <div className="col-lg-12">
               <div
                 className="section-title text-center"
-                data-sal="slide-up"
-                data-sal-duration="700"
-                data-sal-delay="100"
+               
+            
               >
                 <h4 className="subtitle">
                   <span className="theme-gradient">MYSTERIOUS LAND</span>

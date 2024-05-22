@@ -128,9 +128,6 @@ const HomeTwo = () => {
             <div className="col-lg-12" >
               <div
                 className="section-title text-center"
-                data-sal="slide-up"
-                data-sal-duration="700"
-                data-sal-delay="100"
               >
                 <h4 className="subtitle">
                   <span className="theme-gradient">TOKENECOMIC</span>

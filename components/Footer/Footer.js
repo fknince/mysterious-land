@@ -17,7 +17,7 @@ const Footer = () => {
             <div className="row justify-content-center mb--30">
               <div className="col-lg-4 col-md-6 col-sm-12 col-12">
                 <div className="rainbow-footer-widget text-center">
-                  <div className="logo">
+                  <div className="logo" style={{marginBottom:0}}>
                     <Link href="/">
                       <Image
                         className="logo-light"
@@ -35,7 +35,7 @@ const Footer = () => {
                       />
                     </Link>
                   </div>
-                  <p className="b1 text-center mt--20 mb--0">
+                  <p className="b1 text-center mb--0" style={{marginTop:0}}>
                     Your Legendary World
                   </p>
                 </div>
