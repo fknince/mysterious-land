@@ -40,7 +40,7 @@ const HomeTwo = () => {
   }, []);
 
   const data = {
-    labels: ["LIQUIDITY", "LISTING", "BURN", "GROWTH & AIRDROP", "TEAM"],
+    labels: ["LIQUIDITY", "LISTING", "BURN", "AIRDROP", "TEAM"],
     datasets: [
       {
         data: [19, 6, 6, 6, 4],
@@ -69,6 +69,9 @@ const HomeTwo = () => {
     plugins: {
       legend: {
         position: "right",
+        labels: {
+          color: "white",
+        },
       },
       tooltip: {
         callbacks: {
@@ -121,8 +124,22 @@ const HomeTwo = () => {
         data-black-overlay="1"
       >
         <div className="container">
+          <div className="row" style={{ marginTop: "40px" }}>
+            <div className="col-lg-12" >
+              <div
+                className="section-title text-center"
+                data-sal="slide-up"
+                data-sal-duration="700"
+                data-sal-delay="100"
+              >
+                <h4 className="subtitle">
+                  <span className="theme-gradient">TOKENECOMIC</span>
+                </h4>
+              </div>
+            </div>
+          </div>
           <div className="row justify-content-center">
-            <div className="col-lg-12 col-xl-12 order-1 order-lg-2">
+            <div className="col-lg-12 col-xl-12 order-1 order-lg-2" style={{ marginTop: "10px" }}>
               <div
                 className="frame-image frame-image-bottom bg-flashlight video-popup icon-center"
                 style={{
@@ -157,12 +174,11 @@ const HomeTwo = () => {
                     padding: "20px",
                     textAlign: "center",
                     height: "600px",
-                    
                   }}
                 >
                   <div
                     style={{
-                      width: "40%",
+                      width: "100%",
                       display: "flex",
                       flexDirection: "column",
                       justifyContent: "center",
@@ -198,7 +214,7 @@ const HomeTwo = () => {
                   </div>
                   <div
                     style={{
-                      width: "60%",
+                      width: "100%",
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
@@ -206,7 +222,7 @@ const HomeTwo = () => {
                       backgroundColor: "rgba(0, 0, 0, 0.5)",
                     }}
                   >
-                    <Doughnut  data={data} options={options} />
+                    <Doughnut data={data} options={options} />
                   </div>
                 </div>
               </div>

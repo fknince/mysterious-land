@@ -12,7 +12,6 @@ const Footer = () => {
   return (
     <>
       <footer className="rainbow-footer footer-style-default footer-style-3 position-relative">
-        <Separator top={true} />
         <div className="footer-top">
           <div className="container">
             <div className="row justify-content-center mb--30">
@@ -24,20 +23,20 @@ const Footer = () => {
                         className="logo-light"
                         src={logo}
                         width={500}
-                        height={100}
+                        height={500}
                         alt="Corporate Logo"
                       />
                       <Image
                         className="logo-dark"
                         src={logoDark}
                         width={201}
-                        height={35}
+                        height={200}
                         alt="Corporate Logo"
                       />
                     </Link>
                   </div>
                   <p className="b1 text-center mt--20 mb--0">
-                    Building End to End AI Assistants.
+                    Your Legendary World
                   </p>
                 </div>
               </div>

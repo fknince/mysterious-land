@@ -39,14 +39,14 @@ const PopupMobileMenu = () => {
                   className="logo-light"
                   src={logoLight}
                   width={172}
-                  height={30}
+                  height={100}
                   alt="Corporate Logo"
                 />
                 <Image
                   className="logo-dark"
                   src={logoDark}
                   width={172}
-                  height={30}
+                  height={100}
                   alt="Corporate Logo"
                 />
               </Link>

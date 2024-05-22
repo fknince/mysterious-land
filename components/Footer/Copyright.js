@@ -17,7 +17,7 @@ const Copyright = () => {
                     <Link href="/">Terms And Condition</Link>
                   </li>
                   <li>
-                    <Link href="/contact-us">Contact Us</Link>
+                    <Link href="/">Contact Us</Link>
                   </li>
                 </ul>
               </div>
@@ -30,7 +30,7 @@ const Copyright = () => {
                     href="#"
                     className="btn-read-more ps-2"
                   >
-                    <span>Genom</span>
+                    <span>Mysterious Land</span>
                   </Link>
                 </p>
               </div>
