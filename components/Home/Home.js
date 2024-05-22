@@ -72,7 +72,7 @@ const Home = () => {
                 className="frame-image frame-image-bottom bg-flashlight video-popup icon-center"
                 style={{
                   position: "relative",
-                  padding: 5,
+                  padding: 10,
                   borderRadius: 10,
                   overflow: "hidden",
                 }}

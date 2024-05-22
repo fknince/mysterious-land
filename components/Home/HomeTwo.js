@@ -5,9 +5,10 @@ import bannerImg from "../../public/images/banner/banner-image-03.png";
 import Separator from "@/pages/separator";
 import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import ChartDataLabels from "chartjs-plugin-datalabels";
 
 // Registering the components
-ChartJS.register(ArcElement, Tooltip, Legend);
+ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
 
 const HomeTwo = () => {
   const data = {
@@ -18,16 +19,16 @@ const HomeTwo = () => {
         backgroundColor: [
           "#e06a1b",
           "#8e3e05",
-          "#e89b26",
+          "#17e869",
           "#f7a72e",
-          "#c45c0e",
+          "#33777f",
         ],
         hoverBackgroundColor: [
           "#e06a1b",
           "#8e3e05",
-          "#e89b26",
+          "#17e869",
           "#f7a72e",
-          "#c45c0e",
+          "#33777f",
         ],
         borderWidth: 1,
       },
@@ -48,6 +49,13 @@ const HomeTwo = () => {
           },
         },
       },
+      datalabels: {
+        display: true,
+        color: "white",
+        formatter: (value, context) => {
+          return `${value}%`;
+        },
+      },
     },
   };
 
@@ -62,16 +70,20 @@ const HomeTwo = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      const pElement = document.getElementById("image-text");
-      const divImage = document.getElementById("image-div");
+      const pElement = document.getElementById("image-text2");
+      const pElement2 = document.getElementById("image-text2_2");
+      const divImage = document.getElementById("image-div2");
       if (window.innerWidth <= 768) {
         pElement.style.fontSize = "15px";
+        pElement2.style.fontSize = "15px";
         divImage.style.height = "400px";
       } else if (window.innerWidth >= 768 && window.innerWidth <= 991) {
         pElement.style.fontSize = "25px";
+        pElement2.style.fontSize = "25px";
         divImage.style.height = "400px";
       } else {
         pElement.style.fontSize = "35px";
+        pElement2.style.fontSize = "35px";
         divImage.style.height = "600px";
       }
     };
@@ -138,7 +150,7 @@ const HomeTwo = () => {
                   }}
                 ></div>
                 <div
-                  id="image-div"
+                  id="image-div2"
                   style={{
                     position: "relative",
                     zIndex: 2,
@@ -150,19 +162,32 @@ const HomeTwo = () => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
+                    width: "100%",
                   }}
                 >
                   <div
                     style={{
                       display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
                       height: "100%",
                       backgroundColor: "rgba(0, 0, 0, 0.5)",
                       padding: "10px",
+                      width: "100%",
                     }}
                   >
-                    <div style={{ width: "40%", height: "100%" }}>
+                    <div
+                      style={{
+                        width: "40%",
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        height: "100%",
+                      }}
+                    >
                       <p
-                        id="image-text"
+                        id="image-text2"
                         style={{
                           color: "white",
                           fontSize: "35px",
@@ -171,10 +196,30 @@ const HomeTwo = () => {
                           margin: 0,
                         }}
                       >
-                        No private sale %0 Tax
+                        No private sale
+                      </p>
+                      <p
+                        id="image-text2_2"
+                        style={{
+                          color: "white",
+                          fontSize: "35px",
+                          fontFamily: "Indie Flower",
+                          lineHeight: 1.2,
+                          margin: 0,
+                        }}
+                      >
+                        %0 Tax
                       </p>
                     </div>
-                    <div style={{ width: "60%", height: "100%" }}>
+                    <div
+                      style={{
+                        width: "60%",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        height: "100%",
+                      }}
+                    >
                       <Doughnut data={data} options={options} />
                     </div>
                   </div>
