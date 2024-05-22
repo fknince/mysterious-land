@@ -15,6 +15,8 @@ import CallToAction from "@/components/CallToAction/CallToAction";
 import Footer from "@/components/Footer/Footer";
 import Copyright from "@/components/Footer/Copyright";
 import PageHead from "../Head";
+import Applications from "@/components/Applications/Applications";
+
 
 const HomePage = () => {
   return (
@@ -35,6 +37,7 @@ const HomePage = () => {
           <Separator top={true} />
           <HomeTwo />
           <Separator top={true} />
+ 
           {/*<Pricing />
           <Separator top={true} />
           <Accordion isHead={true} />
