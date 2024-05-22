@@ -58,7 +58,7 @@ const Home = () => {
                 data-sal-delay="100"
               >
                 <h4 className="subtitle">
-                  <span className="theme-gradient">WHAT IS MYSTERIOUS LAND</span>
+                  <span className="theme-gradient">MYSTERIOUS LAND</span>
                 </h4>
               </div>
             </div>
