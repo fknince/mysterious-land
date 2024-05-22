@@ -1,0 +1,139 @@
+{
+  "service": [
+    {
+      "title": "Automated Customer Service",
+      "desc": " A chatbot developed using Genom's Prompt Management and Model Management modules provides automatic responses to customer queries, answers frequently asked questions and directs complex problems to the relevant departments.",
+      "icon": "activity",
+      "delay": 100
+    },
+    {
+      "title": "Risk Assessment",
+      "desc": "Financial institutions can use Genom's Document Management Module to assess the credit risk of their customers, which analyzes customer documents and provides detailed information about payment history and financial health.",
+      "icon": "cast",
+      "delay": 100
+    },
+    {
+      "title": "Malfunction Assistant",
+      "desc": "An AI-supported chatbot developed using Genom's Document Management and Prompt Management modules analyzes technical service manuals and offers effective solution suggestions for the faulty machine.",
+      "icon": "map",
+      "delay": 200
+    },
+    {
+      "title": "Disease Diagnosis",
+      "desc": "By analyzing health data, the genome platform can help doctors in the early diagnosis of diseases.",
+      "icon": "loader",
+      "delay": 100
+    },
+    {
+      "title": "Product Recommendation Systems",
+      "desc": "The platform provides personalized product recommendations based on users' past shopping data and search behavior, thus increasing sales rates.",
+      "icon": "speaker",
+      "delay": 100
+    },
+    {
+      "title": "Customer Preference Analysis",
+      "desc": "E-commerce platforms develop models that predict customer preferences by analyzing user behavior, which helps optimize marketing strategies.",
+      "icon": "terminal",
+      "delay": 200
+    }
+  ],
+  "timeline": [
+    {
+      "title": "1. Document Management",
+      "desc": "Upload, segment, preview, test, and share; streamline your data handling process efficiently and quickly."
+    },
+    {
+      "title": "2. Prompt Management",
+      "desc": "Set up, edit, test, and share; optimize your prompts for more effective outcomes."
+    },
+    {
+      "title": "3. Deployment Management",
+      "desc": "Customize to your needs, share, and expand; tailor your models to fit your specific requirements."
+    },
+    {
+      "title": "4. Test Management",
+      "desc": "Create scenarios, schedule, monitor, and improve your models; enhance reliability and performance continuously"
+    }
+  ],
+  "pricing": [
+    {
+      "title": "Bireysel",
+      "price": 0,
+      "text": "",
+      "subTitle": "Süresiz",
+      "isActive": false,
+      "subItem": [
+        {
+          "text": "Çok yakında...",
+          "isMinus": true
+        }
+      ]
+    },
+    {
+      "title": "Kurumsal",
+      "price": 1,
+      "text": "",
+      "subTitle": "Yıllık Abonelik",
+      "isActive": true,
+      "subItem": [
+        {
+          "text": "Çok yakında...",
+          "isMinus": true
+        }
+      ]
+    },
+    {
+      "title": "Büyük Ölçek",
+      "price": 1,
+      "text": "",
+      "subTitle": "Yıllık Abonelik",
+      "isActive": false,
+      "subItem": [
+        {
+          "text": "Çok yakında...",
+          "isMinus": false
+        }
+      ]
+    },
+    {
+      "title": "Enterprise",
+      "price": 40,
+      "text": "Let's Talk",
+      "subTitle": "Forever",
+      "isActive": false,
+      "subItem": [
+        {
+          "text": "3,580,000 Words",
+          "isMinus": false
+        },
+        {
+          "text": "16+ Templates",
+          "isMinus": false
+        },
+        {
+          "text": "8+ Languages",
+          "isMinus": false
+        },
+        {
+          "text": "AI Blog generate",
+          "isMinus": false
+        },
+        {
+          "text": "Advance Editor Tool",
+          "isMinus": false
+        },
+        {
+          "text": "Consistent support",
+          "isMinus": false
+        }
+      ]
+    }
+  ],
+  "accordion": [
+    {
+      "title": "Generative AI Nedir?",
+      "desc": "Generative AI, öğrenme algoritmaları kullanarak yeni içerikler oluşturabilen yapay zeka teknolojisidir. Bu teknoloji, dil, görseller, müzik ve hatta program kodları gibi çeşitli biçimlerde içerik üretebilir. Örneğin, metin tabanlı sorulara cevap verme, şiir veya hikaye yazma, resim üretme gibi işlemler generative AI ile mümkündür. Makine öğrenimi modelleri, büyük veri setlerinden öğrenerek insanların yapabileceği benzeri yaratıcı işler gerçekleştirebilir. Bu alanda kullanılan en popüler yöntemlerden biri de derin öğrenme teknikleridir.",
+      "isExpand": true
+    }
+  ]
+}
