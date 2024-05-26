@@ -3,6 +3,7 @@ import HeaderTop from "@/components/Header/HeaderTop/Header-Top";
 import PopupMobileMenu from "@/components/Header/PopupMobileMenu";
 import Home from "@/components/Home/Home";
 import HomeTwo from "@/components/Home/HomeTwo";
+import HomeThree from "@/components/Home/HomeThree";
 import Service from "@/components/Service/Service";
 import Context from "@/context/Context";
 import Separator from "../separator";
@@ -36,6 +37,8 @@ const HomePage = () => {
           <Home />
           <Separator top={true} />
           <HomeTwo />
+          <Separator top={true} />
+          <HomeThree />
           <Separator top={true} />
  
           {/*<Pricing />
