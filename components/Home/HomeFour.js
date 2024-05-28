@@ -15,7 +15,7 @@ const HomeFour = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      const divImage = document.getElementById("image-div3");
+      const divImage = document.getElementById("image-div4");
       if (window.innerWidth <= 768) {
         divImage.style.height = "auto";
       } else if (window.innerWidth >= 768 && window.innerWidth <= 991) {
@@ -74,15 +74,16 @@ const HomeFour = () => {
                     width: "calc(100% - 10px)",
                     height: "calc(100% - 10px)",
                     backgroundImage: `url(${bannerImg.src})`,
-                    backgroundSize: "auto",
                     backgroundPosition: "center",
                     opacity: 0.9,
                     zIndex: 1,
                     borderRadius: 10,
+                    backgroundSize: "cover"
+
                   }}
                 ></div>
                 <div
-                  id="image-div3"
+                  id="image-div4"
                   style={{
                     position: "relative",
                     zIndex: 2,

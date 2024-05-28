@@ -20,12 +20,28 @@ const HomeThree = () => {
   useEffect(() => {
     const handleResize = () => {
       const divImage = document.getElementById("image-div3");
+      const brandImage1 = document.getElementById("brand-image1");
+      const brandText1 = document.getElementById("brand-text1");
+      const brandImage2 = document.getElementById("brand-image2");
+      const brandText2 = document.getElementById("brand-text2");
       if (window.innerWidth <= 768) {
         divImage.style.height = "400px";
+        brandText1.style.fontSize = "25px";
+        brandImage1.style.width = "60px";
+        brandText2.style.fontSize = "25px";
+        brandImage2.style.width = "60px";
       } else if (window.innerWidth >= 768 && window.innerWidth <= 991) {
+        brandImage1.style.width = "70px";
+        brandText1.style.fontSize = "25px";
         divImage.style.height = "400px";
+        brandText2.style.fontSize = "25px";
+        brandImage2.style.width = "70px";
       } else {
+        brandImage1.style.width = "100px";
         divImage.style.height = "600px";
+        brandText1.style.fontSize = "30px";
+        brandText2.style.fontSize = "30px";
+        brandImage2.style.width = "100px";
       }
     };
 
@@ -110,23 +126,94 @@ const HomeThree = () => {
                   >
                     <ul className="brand-style-2">
                       <li>
-                      <a href="https://x.com/PonixCoin?t=pJUOF4eJiyuTaFy66pTgSQ&s=09" target="_blank">
-                          <Image
-                            src={brand1}
-                            width={148}
-                            height={70}
-                            alt="Brand Image"
-                          />
+                        <a
+                          href="https://x.com/PonixCoin?t=pJUOF4eJiyuTaFy66pTgSQ&s=09"
+                          target="_blank"
+                        >
+                          <div
+                            style={{
+                              margin: 0,
+                              display: "flex",
+                              padding: 0,
+                              flexDirection: "column",
+                              justifyContent: "center",
+                              alignItems: "center",
+                              height: "auto",
+                              width: "auto",
+                              justifyItems: "center",
+                            }}
+                          >
+                            <Image
+                              id="brand-image1"
+                              src={brand1}
+                              width={148}
+                              height={70}
+                              alt="Brand Image"
+                              style={{
+                                display: "flex",
+                                margin: 0,
+                                padding: 0,
+                                width: "100px",
+                              }}
+                            />
+                            <p
+                              id="brand-text1"
+                              style={{
+                                fontFamily: "Indie Flower",
+                                color: "white",
+                                fontSize: "30px",
+                                display: "flex",
+                                margin: 0,
+                                padding: 0,
+                              }}
+                            >
+                              Twitter
+                            </p>
+                          </div>
                         </a>
                       </li>
                       <li>
                         <a href="https://t.me/mysteriouslands" target="_blank">
-                          <Image
-                            src={brand2}
-                            width={148}
-                            height={70}
-                            alt="Brand Image"
-                          />
+                          <div
+                            style={{
+                              margin: 0,
+                              display: "flex",
+                              padding: 0,
+                              flexDirection: "column",
+                              justifyContent: "center",
+                              alignItems: "center",
+                              height: "auto",
+                              width: "auto",
+                              justifyItems: "center",
+                            }}
+                          >
+                            <Image
+                              id="brand-image2"
+                              src={brand2}
+                              width={148}
+                              height={70}
+                              alt="Brand Image"
+                              style={{
+                                display: "flex",
+                                margin: 0,
+                                padding: 0,
+                                width: "100px",
+                              }}
+                            />
+                            <p
+                              id="brand-text2"
+                              style={{
+                                fontFamily: "Indie Flower",
+                                color: "white",
+                                fontSize: "30px",
+                                display: "flex",
+                                margin: 0,
+                                padding: 0,
+                              }}
+                            >
+                              Telegram
+                            </p>
+                          </div>
                         </a>
                       </li>
                     </ul>
