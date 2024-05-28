@@ -15,18 +15,22 @@ const HomeTwo = () => {
     const handleResize = () => {
       const pElement = document.getElementById("image-text2");
       const pElement2 = document.getElementById("image-text2_2");
+      const pElement3 = document.getElementById("image-text2_3");
       const divImage = document.getElementById("image-div2");
       if (window.innerWidth <= 768) {
         pElement.style.fontSize = "25px";
         pElement2.style.fontSize = "25px";
+        pElement3.style.fontSize = "25px";
         divImage.style.height = "400px";
       } else if (window.innerWidth >= 768 && window.innerWidth <= 991) {
         pElement.style.fontSize = "25px";
         pElement2.style.fontSize = "25px";
+        pElement3.style.fontSize = "25px";
         divImage.style.height = "400px";
       } else {
         pElement.style.fontSize = "35px";
         pElement2.style.fontSize = "35px";
+        pElement3.style.fontSize = "35px";
         divImage.style.height = "600px";
       }
     };
@@ -125,10 +129,8 @@ const HomeTwo = () => {
       >
         <div className="container">
           <div className="row" style={{ marginTop: "40px" }}>
-            <div className="col-lg-12" >
-              <div
-                className="section-title text-center"
-              >
+            <div className="col-lg-12">
+              <div className="section-title text-center">
                 <h4 className="subtitle">
                   <span className="theme-gradient">TOKENECOMIC</span>
                 </h4>
@@ -136,7 +138,10 @@ const HomeTwo = () => {
             </div>
           </div>
           <div className="row justify-content-center">
-            <div className="col-lg-12 col-xl-12 order-1 order-lg-2" style={{ marginTop: "10px" }}>
+            <div
+              className="col-lg-12 col-xl-12 order-1 order-lg-2"
+              style={{ marginTop: "10px" }}
+            >
               <div
                 className="frame-image frame-image-bottom bg-flashlight video-popup icon-center"
                 style={{
@@ -184,30 +189,44 @@ const HomeTwo = () => {
                       backgroundColor: "rgba(0, 0, 0, 0.5)",
                     }}
                   >
-                    <p
-                      id="image-text2"
-                      style={{
-                        color: "white",
-                        fontSize: "35px",
-                        fontFamily: "Indie Flower",
-                        lineHeight: 1.2,
-                        margin: 0,
-                      }}
-                    >
-                      No private sale
-                    </p>
-                    <p
-                      id="image-text2_2"
-                      style={{
-                        color: "white",
-                        fontSize: "35px",
-                        fontFamily: "Indie Flower",
-                        lineHeight: 1.2,
-                        margin: 0,
-                      }}
-                    >
-                      %0 Tax
-                    </p>
+                    <div style={{padding:5}}>
+                      <p
+                        id="image-text2_3"
+                        style={{
+                          color: "white",
+                          fontSize: "35px",
+                          fontFamily: "Indie Flower",
+                          lineHeight: 1.2,
+                          margin: 0,
+                        }}
+                      >
+                        <u>600.000.000</u>Total Supply
+                      </p>
+                      <p
+                        id="image-text2"
+                        style={{
+                          color: "white",
+                          fontSize: "35px",
+                          fontFamily: "Indie Flower",
+                          lineHeight: 1.2,
+                          margin: 0,
+                        }}
+                      >
+                        No private sale
+                      </p>
+                      <p
+                        id="image-text2_2"
+                        style={{
+                          color: "white",
+                          fontSize: "45px",
+                          fontFamily: "Indie Flower",
+                          lineHeight: 1.2,
+                          margin: 0,
+                        }}
+                      >
+                        %0 Tax
+                      </p>
+                    </div>
                   </div>
                   <div
                     style={{
