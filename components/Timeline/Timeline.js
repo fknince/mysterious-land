@@ -21,17 +21,8 @@ const Timeline = () => {
     <>
       <div className="rainbow-timeline-area rainbow-section-gap">
         <div className="container">
-          <div className="row" style={{ marginTop: "40px" }}>
-            <div className="col-lg-12">
-              <div className="section-title text-center">
-                <h4 className="subtitle">
-                  <span className="theme-gradient">PROJECT ROADMAP</span>
-                </h4>
-              </div>
-            </div>
-          </div>
           <div className="row">
-            <div className="col-lg-10 offset-lg-1" style={{ marginTop: "10px" }}>
+            <div className="col-lg-10 offset-lg-1">
               <div className="timeline-style-two bg-flashlight bg-color-blackest">
                 <div className="row row--0">
                   {TimnelineData &&

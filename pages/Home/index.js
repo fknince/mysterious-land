@@ -4,6 +4,7 @@ import PopupMobileMenu from "@/components/Header/PopupMobileMenu";
 import Home from "@/components/Home/Home";
 import HomeTwo from "@/components/Home/HomeTwo";
 import HomeThree from "@/components/Home/HomeThree";
+import HomeFour from "@/components/Home/HomeFour";
 import Service from "@/components/Service/Service";
 import Context from "@/context/Context";
 import Separator from "../separator";
@@ -38,7 +39,7 @@ const HomePage = () => {
           <Separator top={true} />
           <HomeTwo />
           <Separator top={true} />
-          <Timeline />
+          <HomeFour />
           <Separator top={true} />
           <HomeThree />
           <Separator top={true} />
