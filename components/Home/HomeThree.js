@@ -19,16 +19,12 @@ const HomeThree = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      const pElement = document.getElementById("image-text");
-      const divImage = document.getElementById("image-div");
+      const divImage = document.getElementById("image-div3");
       if (window.innerWidth <= 768) {
-        pElement.style.fontSize = "15px";
         divImage.style.height = "400px";
       } else if (window.innerWidth >= 768 && window.innerWidth <= 991) {
-        pElement.style.fontSize = "25px";
         divImage.style.height = "400px";
       } else {
-        pElement.style.fontSize = "35px";
         divImage.style.height = "600px";
       }
     };
@@ -90,7 +86,7 @@ const HomeThree = () => {
                   }}
                 ></div>
                 <div
-                  id="image-div"
+                  id="image-div3"
                   style={{
                     position: "relative",
                     zIndex: 2,

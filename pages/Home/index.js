@@ -38,6 +38,8 @@ const HomePage = () => {
           <Separator top={true} />
           <HomeTwo />
           <Separator top={true} />
+          <Timeline />
+          <Separator top={true} />
           <HomeThree />
           <Separator top={true} />
  

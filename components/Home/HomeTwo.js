@@ -43,7 +43,7 @@ const HomeTwo = () => {
     labels: ["LIQUIDITY", "LISTING", "BURN", "AIRDROP", "TEAM"],
     datasets: [
       {
-        data: [19, 6, 6, 6, 4],
+        data: [45, 10, 25, 10, 10],
         backgroundColor: [
           "#e06a1b",
           "#8e3e05",

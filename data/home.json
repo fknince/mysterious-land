@@ -1,8 +1,8 @@
 {
   "service": [
     {
-      "title": "Automated Customer Service",
-      "desc": " A chatbot developed using Genom's Prompt Management and Model Management modules provides automatic responses to customer queries, answers frequently asked questions and directs complex problems to the relevant departments.",
+      "title": "Part 1",
+      "desc": "Building social media platforms,creating the website,successful launch of PONIX,burning LP tokens,creating a community.",
       "icon": "activity",
       "delay": 100
     },
@@ -39,20 +39,16 @@
   ],
   "timeline": [
     {
-      "title": "1. Document Management",
-      "desc": "Upload, segment, preview, test, and share; streamline your data handling process efficiently and quickly."
+      "title": "Phase 1",
+      "desc": "Building social media platforms -> Creating the website -> Successful launch of PONIX -> Burning LP tokens -> Creating a community"
     },
     {
-      "title": "2. Prompt Management",
-      "desc": "Set up, edit, test, and share; optimize your prompts for more effective outcomes."
+      "title": "Phase 2",
+      "desc": "Engaging in discussions to increase social media relations -> Developing decision-making mechanisms with the community ->  Reaching 10K Holders -> Initiating efforts for the burning mechanism"
     },
     {
-      "title": "3. Deployment Management",
-      "desc": "Customize to your needs, share, and expand; tailor your models to fit your specific requirements."
-    },
-    {
-      "title": "4. Test Management",
-      "desc": "Create scenarios, schedule, monitor, and improve your models; enhance reliability and performance continuously"
+      "title": "Phase 3",
+      "desc": "Selecting Mysterious Land characters -> Starting work on technological applications -> Creating a coin on the ERC-20 network -> Determining the airdrop strategy"
     }
   ],
   "pricing": [
