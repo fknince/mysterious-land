@@ -17,21 +17,29 @@ const HomeTwo = () => {
       const pElement2 = document.getElementById("image-text2_2");
       const pElement3 = document.getElementById("image-text2_3");
       const divImage = document.getElementById("image-div2");
+      const chartContainer = document.getElementById("chart-container");
+      const textContainer = document.getElementById("text-container");
       if (window.innerWidth <= 768) {
         pElement.style.fontSize = "25px";
         pElement2.style.fontSize = "25px";
         pElement3.style.fontSize = "25px";
         divImage.style.height = "400px";
+        chartContainer.style.height = "70%";
+        textContainer.style.height = "30%";
       } else if (window.innerWidth >= 768 && window.innerWidth <= 991) {
         pElement.style.fontSize = "25px";
         pElement2.style.fontSize = "25px";
         pElement3.style.fontSize = "25px";
         divImage.style.height = "400px";
+        chartContainer.style.height = "100%";
+        textContainer.style.height = "100%";
       } else {
         pElement.style.fontSize = "35px";
         pElement2.style.fontSize = "35px";
         pElement3.style.fontSize = "35px";
         divImage.style.height = "600px";
+        chartContainer.style.height = "100%";
+        textContainer.style.height = "100%";
       }
     };
 
@@ -179,13 +187,14 @@ const HomeTwo = () => {
                   }}
                 >
                   <div
+                   id="text-container"
                     style={{
                       width: "100%",
                       display: "flex",
                       flexDirection: "column",
                       justifyContent: "center",
                       alignItems: "center",
-                      height: "100%",
+                      height: "30%",
                       backgroundColor: "rgba(0, 0, 0, 0.5)",
                     }}
                   >
@@ -229,12 +238,13 @@ const HomeTwo = () => {
                     </div>
                   </div>
                   <div
+                    id="chart-container"
                     style={{
                       width: "100%",
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
-                      height: "100%",
+                      height: "70%",
                       backgroundColor: "rgba(0, 0, 0, 0.5)",
                     }}
                   >
