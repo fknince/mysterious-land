@@ -17,7 +17,7 @@ const Footer = () => {
             <div className="row justify-content-center mb--30">
               <div className="col-lg-4 col-md-6 col-sm-12 col-12">
                 <div className="rainbow-footer-widget text-center">
-                  <div className="logo" style={{marginBottom:0}}>
+                  <div className="logo" style={{ marginBottom: 0 }}>
                     <Link href="/">
                       <Image
                         className="logo-light"
@@ -35,11 +35,21 @@ const Footer = () => {
                       />
                     </Link>
                   </div>
-                  <p className="b1 text-center mb--0" style={{marginTop:0}}>
-                    Your Legendary World
-                  </p>
+                  
                 </div>
+                
               </div>
+              <p className="b1 text-center mb--0" style={{ marginTop: 0,width:"100%",color:"white"}}>
+                    By acquiring $PONIX coin, you acknowledge and consent to the
+                    understanding that you are not acquiring a security or
+                    investment contract. Furthermore, you agree to indemnify the
+                    project team, absolving them of liability for any potential
+                    losses or tax obligations you may encounter. While $PONIX
+                    operates as a community-focused DeFi Ecosystem and is not
+                    recognized as a registered digital currency, it is
+                    imperative to ensure full compliance with the applicable
+                    local laws and regulations preceding any transactions.
+                  </p>
             </div>
             {/*<div className="separator-animated animated-true mt--50 mb--50"></div>
             {FooterData &&
