@@ -16,6 +16,7 @@ const HomeTwo = () => {
       const pElement = document.getElementById("image-text2");
       const pElement2 = document.getElementById("image-text2_2");
       const pElement3 = document.getElementById("image-text2_3");
+      const pElement4 = document.getElementById("image-text2_4");
       const divImage = document.getElementById("image-div2");
       const chartContainer = document.getElementById("chart-container");
       const textContainer = document.getElementById("text-container");
@@ -23,6 +24,7 @@ const HomeTwo = () => {
         pElement.style.fontSize = "25px";
         pElement2.style.fontSize = "25px";
         pElement3.style.fontSize = "25px";
+        pElement4.style.fontSize = "25px";
         divImage.style.height = "400px";
         chartContainer.style.height = "70%";
         textContainer.style.height = "30%";
@@ -30,6 +32,7 @@ const HomeTwo = () => {
         pElement.style.fontSize = "25px";
         pElement2.style.fontSize = "25px";
         pElement3.style.fontSize = "25px";
+        pElement4.style.fontSize = "25px";
         divImage.style.height = "400px";
         chartContainer.style.height = "100%";
         textContainer.style.height = "100%";
@@ -37,6 +40,7 @@ const HomeTwo = () => {
         pElement.style.fontSize = "35px";
         pElement2.style.fontSize = "35px";
         pElement3.style.fontSize = "35px";
+        pElement4.style.fontSize = "35px";
         divImage.style.height = "600px";
         chartContainer.style.height = "100%";
         textContainer.style.height = "100%";
@@ -130,6 +134,39 @@ const HomeTwo = () => {
             flex-direction: row;
           }
         }
+
+        @keyframes fireEffect {
+          0%, 100% { color: #ff6a00; text-shadow: 0 0 10px #ff6a00, 0 0 20px #ff6a00, 0 0 30px #ff4500, 0 0 40px #ff4500, 0 0 50px #ff4500, 0 0 60px #ff4500, 0 0 70px #ff4500; }
+          50% { color: #ffa500; text-shadow: 0 0 20px #ffa500, 0 0 30px #ffa500, 0 0 40px #ff8c00, 0 0 50px #ff8c00, 0 0 60px #ff8c00, 0 0 70px #ff8c00, 0 0 80px #ff8c00; }
+        }
+
+        @keyframes fireworksEffect {
+          0% { transform: scale(0); opacity: 1; }
+          100% { transform: scale(1); opacity: 0; }
+        }
+
+         .fire-animation {
+          animation: fireEffect 2s ease-in-out infinite;
+        }
+
+        .fireworks {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 10px;
+          height: 10px;
+          background-color: #ff0;
+          border-radius: 50%;
+          animation: fireworksEffect 1s ease-out infinite;
+        }
+
+        .fireworks:nth-child(2) {
+          animation-delay: 0.5s;
+        }
+
+        .fireworks:nth-child(3) {
+          animation-delay: 1s;
+        }
       `}</style>
       <div
         className="slider-area slider-style-1 variation-default slider-bg-image bg-banner1"
@@ -185,9 +222,10 @@ const HomeTwo = () => {
                     textAlign: "center",
                     height: "600px",
                   }}
+                  
                 >
                   <div
-                   id="text-container"
+                    id="text-container"
                     style={{
                       width: "100%",
                       display: "flex",
@@ -198,7 +236,7 @@ const HomeTwo = () => {
                       backgroundColor: "rgba(0, 0, 0, 0.5)",
                     }}
                   >
-                    <div style={{padding:5}}>
+                    <div style={{ padding: 5 }}>
                       <p
                         id="image-text2_3"
                         style={{
@@ -208,6 +246,7 @@ const HomeTwo = () => {
                           lineHeight: 1.2,
                           margin: 0,
                         }}
+                        className="fire-animation"
                       >
                         <u>600.000.000</u>Total Supply
                       </p>
@@ -220,6 +259,7 @@ const HomeTwo = () => {
                           lineHeight: 1.2,
                           margin: 0,
                         }}
+                        className="fire-animation"
                       >
                         No private sale
                       </p>
@@ -232,8 +272,22 @@ const HomeTwo = () => {
                           lineHeight: 1.2,
                           margin: 0,
                         }}
+                        className="fire-animation"
                       >
                         %0 Tax
+                      </p>
+                      <p
+                        id="image-text2_4"
+                        style={{
+                          color: "white",
+                          fontSize: "45px",
+                          fontFamily: "Indie Flower",
+                          lineHeight: 1.2,
+                          margin: 0,
+                        }}
+                        className="fire-animation"
+                      >
+                        %100 Burned LP
                       </p>
                     </div>
                   </div>
