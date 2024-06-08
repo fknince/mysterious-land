@@ -39,16 +39,25 @@
   ],
   "timeline": [
     {
-      "title": "Phase 1",
-      "desc": "Building social media platforms → Creating the website → Successful launch of PONIX → Burning LP tokens → Creating a community"
+      "title": "Part One",
+      "desc": "Building social media platforms → Creating the website → Burning LP tokens",
+      "desc1": "→ Building social media platforms",
+      "desc2": "→ Creating the website",
+      "desc3": "→ Burning LP tokens"
     },
     {
-      "title": "Phase 2",
-      "desc": "Engaging in discussions to increase social media relations → Developing decision-making mechanisms with the community →  Reaching 10K Holders → Initiating efforts for the burning mechanism"
+      "title": "Part Two",
+      "desc": "Increase social media relation → Growth the community →  Reaching 10K Holders",
+      "desc1": "→ Increase social media relation",
+      "desc2": "→ Growth the community",
+      "desc3": "→ Reaching 10K Holders"
     },
     {
-      "title": "Phase 3",
-      "desc": "Selecting Mysterious Land characters → Starting work on technological applications → Creating a coin on the ERC-20 network → Determining the airdrop strategy"
+      "title": "Part Three",
+      "desc": "More characters → Starting technological applications → Burning mechanism",
+      "desc1": "→ More characters",
+      "desc2": "→ Starting technological applications",
+      "desc3": "→ Burning mechanism"
     }
   ],
   "pricing": [

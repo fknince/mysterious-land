@@ -52,10 +52,10 @@ const HomeTwo = () => {
   }, []);
 
   const data = {
-    labels: ["LIQUIDITY", "LISTING", "BURN", "AIRDROP", "TEAM"],
+    labels: ["TEAM", "LISTING", "GIVEAWAYS", "BURN", "LIQUIDITY"],
     datasets: [
       {
-        data: [45, 10, 25, 10, 10],
+        data: [5, 5, 5, 10, 75],
         backgroundColor: [
           "#e06a1b",
           "#8e3e05",

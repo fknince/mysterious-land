@@ -13,6 +13,20 @@ import GridMenu from "./GridMenu";
 const Header = ({ headerTransparent, headerSticky, btnClass }) => {
   const { activeMobileMenu, setActiveMobileMenu } = useAppContext();
   const [isSticky, setIsSticky] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,100 +45,110 @@ const Header = ({ headerTransparent, headerSticky, btnClass }) => {
     };
   }, []);
 
-  useEffect(() => {
-    const handleResize = () => {
-      const h1Element = document.getElementById("mysterious-land-title");
-        if (window.innerWidth <= 768) {
-          h1Element.style.fontSize = "30px";
-          h1Element.style.textAlign = "center";
-        } else if(window.innerWidth >= 768 && window.innerWidth <= 991) {
-          h1Element.style.fontSize = "50px";
-          h1Element.style.textAlign = "center";
-        }
-         else {
-          h1Element.style.fontSize = "80px";
-          h1Element.style.textAlign = "left";
-        }
-      };
-
-      handleResize(); // Call the function to set the initial state
-      window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
     <>
       <style jsx>{`
         @import url('https://fonts.googleapis.com/css2?family=Micro+5&family=Protest+Revolution&display=swap');
+
+        .responsive-logo {
+          width: 100%;
+          height: auto;
+          max-width: 200px; /* Default size for larger screens */
+        }
+
+        @media (max-width: 991px) {
+          .responsive-logo {
+            max-width: 150px; /* Medium screens */
+          }
+        }
+
+        @media (max-width: 768px) {
+          .responsive-logo {
+            max-width: 100px; /* Small screens */
+          }
+        }
+
+        @media (max-width: 480px) {
+          .responsive-logo {
+            max-width: 80px; /* Extra small screens */
+          }
+        }
+
+        .responsive-text {
+          font-family: 'Protest Revolution';
+          color: #c45c0e;
+          font-weight: 400;
+          font-style: normal;
+          text-align: left;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        @media (max-width: 991px) {
+          .responsive-text {
+            font-size: 50px;
+            text-align: center;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .responsive-text {
+            font-size: 30px;
+            text-align: center;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .responsive-text {
+            font-size: 20px;
+            text-align: center;
+          }
+        }
+
+        .text-center-mobile {
+          text-align: center;
+          display: flex;
+          justify-content: center;
+        }
+
+        .logo-container {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+        }
       `}</style>
       <header
-        className={`rainbow-header header-default ${headerTransparent} ${headerSticky} ${
-          isSticky ? "sticky" : ""
-        }`}
+        className={`rainbow-header header-default ${headerTransparent} ${headerSticky}`}
       >
         <div className="container position-relative">
           <div className="row align-items-center row--0">
-            <div className="col-lg-3 col-md-5 col-5">
-              <div className="logo">
-                <Link href="/">
-                  <Image
-                    className="logo-light"
-                    src={logo}
-                    width={201}
-                    height={90}
-                    alt="ChatBot Logo"
-                  />
-                </Link>
+            <div className={`col-lg-3 col-md-5 col-12 ${isMobile ? "text-center-mobile" : ""}`}>
+              <div className="logo-container">
+                <div className="logo">
+                  <Link href="/">
+                    <Image
+                      className="logo-light responsive-logo"
+                      src={logo}
+                      alt="ChatBot Logo"
+                    />
+                  </Link>
+                </div>
               </div>
             </div>
-            <div className="col-lg-9 col-md-7 col-7" style={{ alignItems: "center" }}>
-              <h1
-                id="mysterious-land-title"
-                style={{
-                  fontFamily: "Protest Revolution",
-                  color: "#c45c0e",
-                  fontWeight: 400,
-                  fontStyle: "normal",
-                  fontSize: "80px",
-                  wordBreak: "break-word",
-                  textAlign: "left",
-                }}
-              >
-                The Mysterious Land
-              </h1>
-            </div>
-            {/*<div className="col-lg-4 col-md-3 col-3 position-static">
-              <div >
-                <nav className="mainmenu-nav d-none d-lg-block">
-                  <Nav />
-                </nav>
-
-               <div className="header-btn">
-                  <Link
-                    className={`btn-default ${btnClass}`}
-                    href="/contact-us"
-                  >
-                    Contact Us
-                  </Link>
-      </div>
-
-                <GridMenu ToolsData={ToolsData} />
-
-                <div className="mobile-menu-bar ml--5 d-block d-lg-none">
-                  <div className="hamberger">
-                    <button
-                      className="hamberger-button"
-                      onClick={() => setActiveMobileMenu(!activeMobileMenu)}
-                    >
-                      <i className="feather-menu"></i>
-                    </button>
-                  </div>
-      </div>
-              </div> 
-            </div>*/}
+            {!isMobile && (
+              <div className="col-lg-9 col-md-7 col-7" style={{ alignItems: "center" }}>
+                <h1
+                  id="mysterious-land-title"
+                  className="responsive-text"
+                  style={{
+                    fontSize: "80px",
+                  }}
+                >
+                  The Mysterious Land
+                </h1>
+              </div>
+            )}
           </div>
         </div>
       </header>

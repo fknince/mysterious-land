@@ -4,14 +4,7 @@ import bannerImg from "../../public/images/banner/banner-image-04.png";
 import Timeline from "@/components/Timeline/Timeline";
 
 const HomeFour = () => {
-  useEffect(() => {
-    import("venobox/dist/venobox.min.js").then((venobox) => {
-      new venobox.default({
-        selector: ".popup-video",
-        maxWidth: window.innerWidth >= 992 ? "50%" : "100%",
-      });
-    });
-  }, []);
+
 
   useEffect(() => {
     const handleResize = () => {
@@ -19,7 +12,7 @@ const HomeFour = () => {
       if (window.innerWidth <= 768) {
         divImage.style.height = "auto";
       } else if (window.innerWidth >= 768 && window.innerWidth <= 991) {
-        divImage.style.height = "400px";
+        divImage.style.height = "auto";
       } else {
         divImage.style.height = "600px";
       }
