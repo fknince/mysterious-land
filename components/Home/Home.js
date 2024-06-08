@@ -12,7 +12,7 @@ const Home = () => {
     "Take a step into PONIX's rising and mysterious world!",
     "At Mysterious Land, we value the importance of growth and development together.",
     "We plan to bring many more projects intertwined with the magic of the forest in the future.",
-    "Join us in this adventure and discover yourself in our legendary world!"
+    "Join us in this adventure and discover yourself in our legendary world!",
   ];
 
   useEffect(() => {
@@ -28,21 +28,20 @@ const Home = () => {
     const handleResize = () => {
       const pElement = document.getElementById("image-text");
       const divImage = document.getElementById("image-div");
-        if (window.innerWidth <= 768) {
-          pElement.style.fontSize = "25px";
-          divImage.style.height = "400px";
-        } else if(window.innerWidth >= 768 && window.innerWidth <= 991) {
-          pElement.style.fontSize = "35px";
-          divImage.style.height = "400px";
-        }
-         else {
-          pElement.style.fontSize = "60px";
-          divImage.style.height = "600px";
-        }
-      };
+      if (window.innerWidth <= 768) {
+        pElement.style.fontSize = "25px";
+        divImage.style.height = "400px";
+      } else if (window.innerWidth >= 768 && window.innerWidth <= 991) {
+        pElement.style.fontSize = "35px";
+        divImage.style.height = "400px";
+      } else {
+        pElement.style.fontSize = "60px";
+        divImage.style.height = "600px";
+      }
+    };
 
-      handleResize(); // Call the function to set the initial state
-      window.addEventListener("resize", handleResize);
+    handleResize(); // Call the function to set the initial state
+    window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -51,7 +50,9 @@ const Home = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSentenceIndex((prevIndex) => (prevIndex + 1) % sentences.length);
+      setCurrentSentenceIndex(
+        (prevIndex) => (prevIndex + 1) % sentences.length
+      );
     }, 5000); // Change sentence every 3 seconds
 
     return () => clearInterval(interval);
@@ -63,19 +64,45 @@ const Home = () => {
         @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 
         @keyframes smokeEffect {
-          0% { opacity: 0; transform: translateY(20px); }
-          50% { opacity: 1; transform: translateY(0); }
-          100% { opacity: 0; transform: translateY(-20px); }
+          0% {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          50% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+          100% {
+            opacity: 0;
+            transform: translateY(-20px);
+          }
         }
 
         @keyframes fireEffect {
-          0%, 100% { color: #ff6a00; text-shadow: 0 0 10px #ff6a00, 0 0 20px #ff6a00, 0 0 30px #ff4500, 0 0 40px #ff4500, 0 0 50px #ff4500, 0 0 60px #ff4500, 0 0 70px #ff4500; }
-          50% { color: #ffa500; text-shadow: 0 0 20px #ffa500, 0 0 30px #ffa500, 0 0 40px #ff8c00, 0 0 50px #ff8c00, 0 0 60px #ff8c00, 0 0 70px #ff8c00, 0 0 80px #ff8c00; }
+          0%,
+          100% {
+            color: #ff6a00;
+            text-shadow: 0 0 10px #ff6a00, 0 0 20px #ff6a00, 0 0 30px #ff4500,
+              0 0 40px #ff4500, 0 0 50px #ff4500, 0 0 60px #ff4500,
+              0 0 70px #ff4500;
+          }
+          50% {
+            color: #ffa500;
+            text-shadow: 0 0 20px #ffa500, 0 0 30px #ffa500, 0 0 40px #ff8c00,
+              0 0 50px #ff8c00, 0 0 60px #ff8c00, 0 0 70px #ff8c00,
+              0 0 80px #ff8c00;
+          }
         }
 
         @keyframes fireworksEffect {
-          0% { transform: scale(0); opacity: 1; }
-          100% { transform: scale(1); opacity: 0; }
+          0% {
+            transform: scale(0);
+            opacity: 1;
+          }
+          100% {
+            transform: scale(1);
+            opacity: 0;
+          }
         }
 
         .smoke-animation {
@@ -172,7 +199,6 @@ const Home = () => {
                       width: "80%",
                       justifyContent: "center",
                       alignItems: "center",
-
                     }}
                   >
                     <p
@@ -184,26 +210,25 @@ const Home = () => {
                         fontFamily: "Indie Flower",
                         lineHeight: 1.2,
                         margin: 0,
-                        textAlign :"center",
+                        textAlign: "center",
                         padding: "0px",
                       }}
                     >
                       {sentences[currentSentenceIndex]}
                     </p>
                   </div>
-                  <div className="fireworks" style={{ top: "20%", left: "20%" }}></div>
-                  <div className="fireworks" style={{ top: "30%", left: "70%" }}></div>
-                  <div className="fireworks" style={{ top: "80%", left: "50%" }}></div>
-                  <div className="fireworks" style={{ top: "30%", left: "20%" }}></div>
-                  <div className="fireworks" style={{ top: "40%", left: "30%" }}></div>
-                  <div className="fireworks" style={{ top: "10%", left: "80%" }}></div>
-                  <div className="fireworks" style={{ top: "5%", left: "5%" }}></div>
-                  <div className="fireworks" style={{ top: "25%", left: "25%" }}></div>
-                  <div className="fireworks" style={{ top: "45%", left: "45%" }}></div>
-                  <div className="fireworks" style={{ top: "65%", left: "65%" }}></div>
-                  <div className="fireworks" style={{ top: "85%", left: "85%" }}></div>
-                  <div className="fireworks" style={{ top: "90%", left: "90%" }}></div>
-
+                  <div
+                    className="fireworks"
+                    style={{ top: "20%", left: "20%" }}
+                  ></div>
+                  <div
+                    className="fireworks"
+                    style={{ top: "30%", left: "70%" }}
+                  ></div>
+                  <div
+                    className="fireworks"
+                    style={{ top: "80%", left: "50%" }}
+                  ></div>
                 </div>
               </div>
             </div>
