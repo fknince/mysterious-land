@@ -21,18 +21,18 @@ const HomeTwo = () => {
       const chartContainer = document.getElementById("chart-container");
       const textContainer = document.getElementById("text-container");
       if (window.innerWidth <= 768) {
-        pElement.style.fontSize = "25px";
-        pElement2.style.fontSize = "25px";
-        pElement3.style.fontSize = "25px";
-        pElement4.style.fontSize = "25px";
+        pElement.style.fontSize = "20px";
+        pElement2.style.fontSize = "20px";
+        pElement3.style.fontSize = "20px";
+        pElement4.style.fontSize = "20px";
         divImage.style.height = "400px";
         chartContainer.style.height = "70%";
         textContainer.style.height = "30%";
       } else if (window.innerWidth >= 768 && window.innerWidth <= 991) {
-        pElement.style.fontSize = "25px";
-        pElement2.style.fontSize = "25px";
-        pElement3.style.fontSize = "25px";
-        pElement4.style.fontSize = "25px";
+        pElement.style.fontSize = "20px";
+        pElement2.style.fontSize = "20px";
+        pElement3.style.fontSize = "20px";
+        pElement4.style.fontSize = "20px";
         divImage.style.height = "400px";
         chartContainer.style.height = "100%";
         textContainer.style.height = "100%";
@@ -246,7 +246,6 @@ const HomeTwo = () => {
                           lineHeight: 1.2,
                           margin: 0,
                         }}
-                        className="fire-animation"
                       >
                         <u>600.000.000</u>Total Supply
                       </p>
@@ -272,7 +271,7 @@ const HomeTwo = () => {
                           lineHeight: 1.2,
                           margin: 0,
                         }}
-                        className="fire-animation"
+                   
                       >
                         %0 Tax
                       </p>
@@ -285,7 +284,7 @@ const HomeTwo = () => {
                           lineHeight: 1.2,
                           margin: 0,
                         }}
-                        className="fire-animation"
+                  
                       >
                         %100 Burned LP
                       </p>
