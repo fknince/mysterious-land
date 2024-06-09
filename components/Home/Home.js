@@ -7,12 +7,9 @@ import Separator from "@/pages/separator";
 const Home = () => {
   const [currentSentenceIndex, setCurrentSentenceIndex] = useState(0);
   const sentences = [
-    "Welcome! Mysterious Land opens the doors to a world filled with trustworthiness and growth potential.",
-    "This exciting adventure begins with our first meme coin project themed around Phoneix.",
-    "Take a step into PONIX's rising and mysterious world!",
-    "At Mysterious Land, we value the importance of growth and development together.",
-    "We plan to bring many more projects intertwined with the magic of the forest in the future.",
-    "Join us in this adventure and discover yourself in our legendary world!",
+    "Welcome! Mysterious Land opens the doors to a world filled with trustworthiness and growth potential. This exciting adventure begins with our first meme coin project themed around Phoneix.",
+    "Take a step into PONIX's rising and mysterious world! At Mysterious Land, we value the importance of growth and development together.",
+    "We plan to bring many more projects intertwined with the magic of the forest in the future. Join us in this adventure and discover yourself in our legendary world!",
   ];
 
   useEffect(() => {
@@ -29,13 +26,13 @@ const Home = () => {
       const pElement = document.getElementById("image-text");
       const divImage = document.getElementById("image-div");
       if (window.innerWidth <= 768) {
-        pElement.style.fontSize = "25px";
+        pElement.style.fontSize = "20px";
         divImage.style.height = "400px";
       } else if (window.innerWidth >= 768 && window.innerWidth <= 991) {
-        pElement.style.fontSize = "35px";
+        pElement.style.fontSize = "25px";
         divImage.style.height = "400px";
       } else {
-        pElement.style.fontSize = "60px";
+        pElement.style.fontSize = "50px";
         divImage.style.height = "600px";
       }
     };

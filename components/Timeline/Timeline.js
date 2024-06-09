@@ -25,7 +25,7 @@ const Timeline = () => {
               <div
                 className="col-lg-4 col-md-4 rainbow-timeline-single dark-line"
                 key={index}
-                style={{ width: "auto", height: "auto" }}
+                style={{ width: "350px", height: "auto" }}
               >
                 <div className="rainbow-timeline">
                   <h6
@@ -50,8 +50,8 @@ const Timeline = () => {
                     data-sal-duration="700"
                     data-sal-delay="300"
                     style={{
-                      fontSize: "20px",
-                      textAlign: "left",
+                      fontSize: "15px",
+                      textAlign: "center",
                       whiteSpace: "normal",
                     }}
                   >
@@ -63,8 +63,8 @@ const Timeline = () => {
                     data-sal-duration="700"
                     data-sal-delay="300"
                     style={{
-                      fontSize: "20px",
-                      textAlign: "left",
+                      fontSize: "15px",
+                      textAlign: "center",
                       whiteSpace: "normal",
                     }}
                   >
@@ -76,8 +76,8 @@ const Timeline = () => {
                     data-sal-duration="700"
                     data-sal-delay="300"
                     style={{
-                      fontSize: "20px",
-                      textAlign: "left",
+                      fontSize: "15px",
+                      textAlign: "center",
                       whiteSpace: "normal",
                     }}
                   >
