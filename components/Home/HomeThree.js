@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import "venobox/dist/venobox.min.css";
-import bannerImg from "../../public/images/banner/banner-image-05.png";
+import bannerImg from "../../public/images/banner/banner-image-04.png";
 import Separator from "@/pages/separator";
 import brand1 from "../../public/images/brand/twitter-icon.png";
 import brand2 from "../../public/images/brand/telegram-icon.png";
