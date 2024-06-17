@@ -5,6 +5,7 @@ import Home from "@/components/Home/Home";
 import HomeTwo from "@/components/Home/HomeTwo";
 import HomeThree from "@/components/Home/HomeThree";
 import HomeFour from "@/components/Home/HomeFour";
+import HomeFive from "@/components/Home/HomeFive";
 import Service from "@/components/Service/Service";
 import Context from "@/context/Context";
 import Separator from "../separator";
@@ -43,6 +44,8 @@ const HomePage = () => {
           <Separator top={true} />
           <HomeThree />
           <Separator top={true} />
+          <HomeFive />
+          <Separator top={false} />
  
           {/*<Pricing />
           <Separator top={true} />
