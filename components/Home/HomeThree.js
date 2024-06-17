@@ -127,7 +127,7 @@ const HomeThree = () => {
                     <ul className="brand-style-2">
                       <li>
                         <a
-                          href="https://x.com/PonixCoin?t=pJUOF4eJiyuTaFy66pTgSQ&s=09"
+                          href="https://x.com/PONIXsol"
                           target="_blank"
                         >
                           <div
