@@ -27,6 +27,18 @@ const HomeFive = () => {
           position: relative;
         }
 
+        .scroll-container {
+          overflow-x: auto;
+          white-space: nowrap;
+          padding: 0 10px; /* Eklenen */
+          flex-grow: 1; /* Eklendi */
+        }
+
+        .gradient-div h3 {
+          display: inline-block;
+          margin: 0; /* Eklenen */
+        }
+
         .copy-button {
           background: transparent;
           border: 1px solid #fff;
@@ -34,6 +46,8 @@ const HomeFive = () => {
           border-radius: 5px;
           cursor: pointer;
           color: #fff;
+          margin-left: 10px; /* Eklenen */
+          flex-shrink: 0; /* Eklendi */
         }
 
         .copied-message {
@@ -60,7 +74,9 @@ const HomeFive = () => {
             <div className="col-lg-12 col-xl-12 order-1 order-lg-2" style={{ marginTop: "10px" }}>
               <div className="frame-image frame-image-bottom bg-flashlight video-popup icon-center" style={{ position: "relative", padding: 10, borderRadius: 10, overflow: "hidden" }}>
                 <div className="gradient-div">
-                  <h3 style={{textAlign:"center"}}>BkWyc14g3NzUeqTupj4WnT3GJQELsP5vykkQ4JEL3ceu</h3>
+                  <div className="scroll-container">
+                    <h3>BkWyc14g3NzUeqTupj4WnT3GJQELsP5vykkQ4JEL3ceu</h3>
+                  </div>
                   <button className="copy-button" onClick={handleCopy}>
                     {copied ? "Copied!" : "Copy"}
                   </button>
