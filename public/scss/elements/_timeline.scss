@@ -55,7 +55,7 @@ Timeline Area
         height: 2.1rem;
         border-radius: 50%;
         background: linear-gradient(180deg, var(--color-primary), var(--color-primary));
-        box-shadow: 0 0 15px rgba(82, 56, 255, 0.50);
+        box-shadow: 0 0 15px white
     }
 
     &::after {
@@ -73,7 +73,7 @@ Timeline Area
         left: 50%;
         width: 100px;
         height: 100px;
-        background: radial-gradient(50% 50% at 50% 50%, rgba(242, 201, 76, 0) 40.62%, rgba(82, 56, 255, .5) 100%);
+        background: radial-gradient(50% 50% at 50% 50%, rgba(242, 201, 76, 0) 40.62%, white 100%);
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         will-change: transform;
@@ -352,7 +352,7 @@ Timeline Area
             .progress-line {
                 .line-inner {
                     background-image: inherit;
-                    background: var(--color-primary-alt);
+                    background: white;
                 }
             }
 
@@ -362,7 +362,7 @@ Timeline Area
                     background: var(--color-primary-alt);
 
                     .dot-inner {
-                        background-color: var(--color-primary);
+                        background-color: white;
                     }
                 }
             }
