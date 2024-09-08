@@ -14,11 +14,36 @@ const JupiterWidget = () => {
 
     if (isWidgetOpen) {
       document.addEventListener("mousedown", handleClickOutside);
-    }
 
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+      // Load the Jupiter script dynamically when the widget is open
+      const script = document.createElement('script');
+      script.src = 'https://terminal.jup.ag/main-v3.js';
+      script.async = true;
+      script.onload = () => {
+        // Initialize the Jupiter widget after the script has loaded
+        window.Jupiter.init({
+          displayMode: "integrated",
+          integratedTargetId: "integrated-terminal",
+          endpoint: "https://api.mainnet-beta.solana.com",
+          strictTokenList: false,
+          defaultExplorer: "Solscan",
+          formProps: {
+            fixedOutputMint: true,
+            swapMode: "ExactIn",
+            initialAmount: "1000",
+            initialOutputMint: "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+            initialSlippageBps: 5,
+          },
+        });
+      };
+
+      document.body.appendChild(script);
+
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+        document.body.removeChild(script); // Cleanup the script when the widget is closed
+      };
+    }
   }, [isWidgetOpen]);
 
   const toggleWidget = () => {
@@ -42,27 +67,7 @@ const JupiterWidget = () => {
               X
             </button>
 
-            <div className="widget-content">
-              <script
-                type="text/javascript"
-                dangerouslySetInnerHTML={{
-                  __html: `
-                    window.Jupiter.init({
-                      endpoint: "https://api.mainnet-beta.solana.com",
-                      strictTokenList: false,
-                      defaultExplorer: "Solscan",
-                      formProps: {
-                        fixedOutputMint: true,
-                        swapMode: "ExactIn",
-                        initialAmount: "1000",
-                        initialOutputMint: "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
-                        initialSlippageBps: 5,
-                      },
-                    });
-                  `,
-                }}
-              />
-            </div>
+            <div id="integrated-terminal" style={{alignItems:"center",justifyContent:"center",display:"flex", width: "100%", height: "100%",minHeight:"440px",minWidth:"590px" }}></div>
           </div>
         </div>
       )}
@@ -103,12 +108,16 @@ const JupiterWidget = () => {
 
         .widget-container {
           position: relative;
-          background: white;
-          padding: 20px;
+            background: linear-gradient(45deg, #3f7489, #071020);
+          padding: 5px;
           border-radius: 10px;
           box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-          width: 400px;
+          width: 450px;
+          height: 600px;
           max-width: 90%;
+          justify-content: center;
+          margin: 0;
+          
         }
 
         .widget-close-button {
@@ -119,6 +128,7 @@ const JupiterWidget = () => {
           border: none;
           font-size: 20px;
           cursor: pointer;
+          color: white;
         }
 
         .widget-content {
