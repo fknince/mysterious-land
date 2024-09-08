@@ -37,7 +37,19 @@ const BackToTop = () => {
 
     progressRef.current?.addEventListener("click", (event) => {
       event.preventDefault();
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      // scrollTo yerine Jupiter Widget'ı açılıyor
+      window.Jupiter.init({
+        endpoint: "https://api.mainnet-beta.solana.com",
+        strictTokenList: false,
+        defaultExplorer: "Solscan",
+        formProps: {
+          fixedOutputMint: true,
+          swapMode: "ExactIn",
+          initialAmount: "1000",
+          initialOutputMint: "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+          initialSlippageBps: 5,
+        },
+      });
     });
 
     return () => {
@@ -52,7 +64,6 @@ const BackToTop = () => {
         width="100%"
         height="100%"
         viewBox="-1 -1 102 102"
-
       >
         <image
           href="/images/jupiter/jupiter-logo.svg"
