@@ -24,7 +24,7 @@ const BackToTop = () => {
 
       const rbtProgressParent = progressRef.current;
       if (rbtProgressParent) {
-        if (scroll > 50) {
+        if (scroll >= 0) {
           rbtProgressParent.classList.add("rn-backto-top-active");
         } else {
           rbtProgressParent.classList.remove("rn-backto-top-active");
@@ -52,10 +52,15 @@ const BackToTop = () => {
         width="100%"
         height="100%"
         viewBox="-1 -1 102 102"
+
       >
+        <image
+          href="/images/jupiter/jupiter-logo.svg"
+          width="100"
+          height="100"
+        />
         <path
           d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
-          // style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"
         ></path>
       </svg>
     </div>
