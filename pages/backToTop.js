@@ -37,7 +37,7 @@ const BackToTop = () => {
 
     progressRef.current?.addEventListener("click", (event) => {
       event.preventDefault();
-      // scrollTo yerine Jupiter Widget'ı açılıyor
+
       window.Jupiter.init({
         endpoint: "https://api.mainnet-beta.solana.com",
         strictTokenList: false,
