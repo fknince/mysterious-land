@@ -24,7 +24,7 @@ const JupiterWidget = () => {
         window.Jupiter.init({
           displayMode: "integrated",
           integratedTargetId: "integrated-terminal",
-          endpoint: "https://misty-flashy-bridge.solana-mainnet.quiknode.pro",
+          endpoint: "https://cosmopolitan-thrumming-dawn.solana-mainnet.quiknode.pro/1cbcf6878394dbd7fab3a3c65d77f24a6c5bf0c8",
           strictTokenList: false,
           defaultExplorer: "Solscan",
           formProps: {
