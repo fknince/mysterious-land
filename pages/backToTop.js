@@ -1,51 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 
 const JupiterWidget = () => {
   const [isWidgetOpen, setIsWidgetOpen] = useState(false);
   const [isScriptLoaded, setIsScriptLoaded] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-  useEffect(() => {
-    const loadScript = () => {
+  const loadScript = useCallback(() => {
+    return new Promise((resolve, reject) => {
       const script = document.createElement("script");
       script.src = "https://terminal.jup.ag/main-v3.js";
       script.async = true;
-      script.onload = () => {
-        setIsScriptLoaded(true);
-      };
+      script.onload = () => resolve();
+      script.onerror = () => reject(new Error("Failed to load Jupiter script"));
       document.body.appendChild(script);
-    };
+    });
+  }, []);
 
-    if (!isScriptLoaded) {
-      loadScript();
-    }
-
-    // Add back button listener for mobile devices
-    const handleBackButton = (event) => {
-      if (isWidgetOpen) {
-        event.preventDefault();
-        setIsWidgetOpen(false);
-      }
-    };
-
-    window.addEventListener('popstate', handleBackButton);
-
-    return () => window.removeEventListener('popstate', handleBackButton);
-  }, [isScriptLoaded, isWidgetOpen]);
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      const widgetContainer = document.querySelector(".widget-container");
-      const widgetButton = document.querySelector(".jupiter-widget-button");
-      if (
-        widgetContainer &&
-        !widgetContainer.contains(event.target) &&
-        !widgetButton.contains(event.target)
-      ) {
-        setIsWidgetOpen(false);
-      }
-    };
-
-    if (isWidgetOpen && isScriptLoaded && window.Jupiter) {
+  const initializeJupiter = useCallback(() => {
+    if (window.Jupiter) {
       window.Jupiter.init({
         displayMode: "integrated",
         integratedTargetId: "integrated-terminal",
@@ -61,14 +34,43 @@ const JupiterWidget = () => {
           initialSlippageBps: 5,
         },
       });
-
-      document.addEventListener("mousedown", handleClickOutside);
     }
+  }, []);
 
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+  useEffect(() => {
+    const setupWidget = async () => {
+      if (!isScriptLoaded && isWidgetOpen) {
+        setIsLoading(true);
+        setError(null);
+        try {
+          await loadScript();
+          setIsScriptLoaded(true);
+          initializeJupiter();
+        } catch (err) {
+          console.error("Failed to load Jupiter widget:", err);
+          setError("Failed to load the widget. Please try again later.");
+        } finally {
+          setIsLoading(false);
+        }
+      } else if (isScriptLoaded && isWidgetOpen) {
+        initializeJupiter();
+      }
     };
-  }, [isWidgetOpen, isScriptLoaded]);
+
+    setupWidget();
+  }, [isWidgetOpen, isScriptLoaded, loadScript, initializeJupiter]);
+
+  useEffect(() => {
+    const handleBackButton = (event) => {
+      if (isWidgetOpen) {
+        event.preventDefault();
+        setIsWidgetOpen(false);
+      }
+    };
+
+    window.addEventListener("popstate", handleBackButton);
+    return () => window.removeEventListener("popstate", handleBackButton);
+  }, [isWidgetOpen]);
 
   const toggleWidget = () => {
     setIsWidgetOpen(!isWidgetOpen);
@@ -88,19 +90,26 @@ const JupiterWidget = () => {
       {isWidgetOpen && (
         <div className="widget-overlay">
           <div className="widget-container">
-            <button className="close-button" onClick={() => setIsWidgetOpen(false)}>
+            <button
+              className="close-button"
+              onClick={() => setIsWidgetOpen(false)}
+            >
               &times;
             </button>
-            <div
-              id="integrated-terminal"
-              style={{
-                width: "100%",
-                height: "100%",
-                minHeight: "440px",
-                minWidth: "100px",
-                alignContent: "center",
-              }}
-            ></div>
+            {isLoading && <div className="loading">Loading widget...</div>}
+            {error && <div className="error">{error}</div>}
+            {!isLoading && !error && (
+              <div
+                id="integrated-terminal"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  minHeight: "440px",
+                  minWidth: "100px",
+                  alignContent: "center",
+                }}
+              ></div>
+            )}
           </div>
         </div>
       )}
@@ -214,6 +223,19 @@ const JupiterWidget = () => {
           .widget-container :global(span) {
             font-size: 12px !important;
           }
+        }
+        .loading,
+        .error {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          color: white;
+          font-size: 18px;
+        }
+
+        .error {
+          color: #ff6b6b;
         }
       `}</style>
     </>
